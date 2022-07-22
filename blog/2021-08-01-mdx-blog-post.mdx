@@ -11,8 +11,30 @@ Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/mar
 
 Use the power of React to create interactive blog posts.
 
-```js
+```jsx live
 <button onClick={() => alert('button clicked!')}>Click me!</button>
+```
+```jsx live
+function Clock(props) {
+  const [date, setDate] = useState(new Date());
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 1000);
+
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
+
+  function tick() {
+    setDate(new Date());
+  }
+
+  return (
+    <div>
+      <h2>It is {date.toLocaleTimeString()}.</h2>
+    </div>
+  );
+}
 ```
 
 <button onClick={() => alert('button clicked!')}>Click me!</button>
