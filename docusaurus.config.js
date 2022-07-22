@@ -6,13 +6,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Blog',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Blogs',// process.env.title,
+  tagline: 'tagline', // process.env.tagline,
+  url: 'https://your-docusaurus-test-site.com', //process.env.url,
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  themes: ['@docusaurus/theme-live-codeblock'],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -35,6 +36,7 @@ const config = {
         docs: false,
         blog: {
           showReadingTime: true,
+          blogSidebarCount: 0,
           feedOptions: {
             type: 'all',
             copyright: 'Copyright © ${new Date().getFullYear()} Ebuka O.'
@@ -55,10 +57,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Blog',
+        title: 'Ebuka Obukwelu',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           // {
@@ -67,7 +69,7 @@ const config = {
           //   position: 'left',
           //   label: 'Tutorial',
           // },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           // {
           //   href: 'https://github.com/facebook/docusaurus',
           //   label: 'GitHub',
